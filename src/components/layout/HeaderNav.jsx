@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 export const HeaderNav = () => {
   return (
-    <header>
+    <header className="header">
       <div className='logo'>
         <span>V</span>
         <h3>Victor Robles WEB</h3>
@@ -11,19 +11,19 @@ export const HeaderNav = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/home" className={({isActive}) => isActive ? "active" : "" }>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/portfolio">Portfolio</NavLink>
+            <NavLink to="/portfolio" className={({isActive}) => isActive ? "active" : "" }>Portfolio</NavLink>
           </li>
           <li>
-            <NavLink to="/services">Services</NavLink>
+            <NavLink to="/services" className={({isActive}) => isActive ? "active" : "" }>Services</NavLink>
           </li>
           <li>
-            <NavLink to="/curriculum">Curriculum</NavLink>
+            <NavLink to="/curriculum" className={({isActive}) => isActive ? "active" : "" }>Curriculum</NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact" className={({isActive}) => isActive ? "active" : "" }>Contact</NavLink>
           </li>
         </ul>
       </nav>

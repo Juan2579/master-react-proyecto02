@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Contact } from '../components/Contact'
 import { Curriculum } from '../components/Curriculum'
 import { Home } from '../components/Home'
@@ -13,15 +13,18 @@ export const MyRoutes = () => {
     <BrowserRouter>
       { /* HEADER Y NAVEGACION */}
       <HeaderNav />
+
       { /* CONTENIDO CENTRAL */}
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/home' element={<Home />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/curriculum' element={<Curriculum />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
+      <section className='content'>
+        <Routes>
+          <Route path='/' element={<Navigate to="/home" />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/curriculum' element={<Curriculum />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </section>
 
       { /* FOOTER */}
       <Footer />

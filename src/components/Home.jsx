@@ -1,7 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <div className='home'>
+      <h1>
+        Hola, soy Victor Robles y soy Desarrollador Web en Madrid, y ofrezco mis servicios de programacion y desarrollo en todo tipo de proyectos web
+      </h1>
+
+      <h2>
+        Te ayudo a crear tu sitio o aplicacion web, tener mas visiblidad y relevancia en internet. <Link to="/contact">Contacta conmigo.</Link>
+      </h2>
+
+      <section className='lasts-works'>
+        <h2>Algunos de mis proyectos</h2>
+        <p>Estos son algunos de mis trabajos de desarrollo web.</p>
+
+        <div className='works'>
+
+        </div>
+      </section>
+    </div>
   )
 }
