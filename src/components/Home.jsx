@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { ListadoTrabajos } from './ListadoTrabajos'
 
 export const Home = () => {
   return (
@@ -17,7 +18,7 @@ export const Home = () => {
         <p>Estos son algunos de mis trabajos de desarrollo web.</p>
 
         <div className='works'>
-
+          <ListadoTrabajos />
         </div>
       </section>
     </div>
